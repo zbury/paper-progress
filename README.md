@@ -1,6 +1,6 @@
-[![Build status](https://travis-ci.org/PolymerElements/paper-progress.svg?branch=master)](https://travis-ci.org/PolymerElements/paper-progress)
+##&lt;vertical-progress&gt;
 
-##&lt;paper-progress&gt;
+Fork of [&lt;paper-progress&gt;](https://github.com/PolymerElements/paper-progress) with a vertical layout.
 
 Material design: [Progress & activity](https://www.google.com/design/spec/components/progress-activity.html)
 
@@ -10,23 +10,23 @@ Material design: [Progress & activity](https://www.google.com/design/spec/compon
   <template>
     <script src="../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="../paper-styles/color.html">
-    <link rel="import" href="paper-progress.html">
+    <link rel="import" href="vertical-progress.html">
     <style is="custom-style">
-      paper-progress {
+      vertical-progress {
         display: block;
         width: 100%;
         margin: 20px 0;
       }
-      paper-progress.slow {
-        --paper-progress-indeterminate-cycle-duration: 5s;
+      vertical-progress.slow {
+        --vertical-progress-indeterminate-cycle-duration: 5s;
       }
-      paper-progress.blue {
-        --paper-progress-active-color: var(--paper-light-blue-500);
-        --paper-progress-secondary-color: var(--paper-light-blue-100);
+      vertical-progress.blue {
+        --vertical-progress-active-color: var(--paper-light-blue-500);
+        --vertical-progress-secondary-color: var(--paper-light-blue-100);
       }
-      paper-progress.red {
-        --paper-progress-active-color: var(--paper-red-500);
-        --paper-progress-secondary-color: var(--paper-red-100);
+      vertical-progress.red {
+        --vertical-progress-active-color: var(--paper-red-500);
+        --vertical-progress-secondary-color: var(--paper-red-100);
       }
     </style>
     <next-code-block></next-code-block>
@@ -35,9 +35,9 @@ Material design: [Progress & activity](https://www.google.com/design/spec/compon
 ```
 -->
 ```html
-<paper-progress indeterminate class="blue"></paper-progress>
-<paper-progress indeterminate class="slow red"></paper-progress>
-<paper-progress value="40" secondary-progress="80"></paper-progress>
+<vertical-progress indeterminate class="blue"></vertical-progress>
+<vertical-progress indeterminate class="slow red"></vertical-progress>
+<vertical-progress value="40" secondary-progress="80"></vertical-progress>
 ```
 
 The progress bars are for situations where the percentage completed can be
@@ -46,4 +46,3 @@ will take.
 
 There is also a secondary progress which is useful for displaying intermediate
 progress, such as the buffer level during a streaming playback progress bar.
-

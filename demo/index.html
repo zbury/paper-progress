@@ -10,7 +10,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <!doctype html>
 <html>
 <head>
-  <title>paper-progress demo</title>
+  <title>vertical-progress demo</title>
 
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
   <meta name="mobile-web-app-capable" content="yes">
@@ -20,14 +20,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="import" href="../../paper-styles/color.html">
   <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
   <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-  <link rel="import" href="../paper-progress.html">
+  <link rel="import" href="../vertical-progress.html">
   <link rel="import" href="../../paper-button/paper-button.html">
 
   <style is="custom-style" include="demo-pages-shared-styles">
-    paper-progress {
+    vertical-progress {
       display: block;
-      width: 100%;
-      margin: 20px 0;
+      /*width: 100%;*/
+      margin: 0 20px;
     }
     paper-button {
       display: inline-block;
@@ -38,27 +38,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </head>
 <body unresolved>
   <div class="vertical-section-container centered">
-    <h3>paper-progress can be imperatively controlled</h3>
+    <h3>vertical-progress can be imperatively controlled</h3>
     <demo-snippet class="centered-demo">
       <template>
         <p>Once started, loops 5 times before stopping.
           <!-- View the source code to see the contents of startProgress() -->
           <paper-button raised onclick="startProgress();" id="start">Start</paper-button>
         </p>
-        <paper-progress id="progress"></paper-progress>
+        <vertical-progress id="progress"></vertical-progress>
       </template>
     </demo-snippet>
 
-    <h3>paper-progress can be indeterminate with a custom duration</h3>
+    <h3>vertical-progress can be indeterminate with a custom duration</h3>
     <demo-snippet class="centered-demo">
       <template>
         <style is="custom-style">
-          paper-progress.slow {
-            --paper-progress-indeterminate-cycle-duration: 20s;
+          vertical-progress.slow {
+            --vertical-progress-indeterminate-cycle-duration: 20s;
           }
         </style>
-        <paper-progress indeterminate></paper-progress>
-        <paper-progress indeterminate class="slow"></paper-progress>
+        <vertical-progress indeterminate></vertical-progress>
+        <vertical-progress indeterminate class="slow"></vertical-progress>
       </template>
     </demo-snippet>
 
@@ -66,24 +66,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <demo-snippet class="centered-demo">
       <template>
         <style is="custom-style">
-          paper-progress.blue {
-            --paper-progress-active-color: var(--paper-light-blue-500);
-            --paper-progress-secondary-color: var(--paper-light-blue-100);
+          vertical-progress.blue {
+            --vertical-progress-active-color: var(--paper-light-blue-500);
+            --vertical-progress-secondary-color: var(--paper-light-blue-100);
           }
 
-          paper-progress.red {
-            --paper-progress-active-color: var(--paper-red-500);
-            --paper-progress-secondary-color: var(--paper-red-100);
+          vertical-progress.red {
+            --vertical-progress-active-color: var(--paper-red-500);
+            --vertical-progress-secondary-color: var(--paper-red-100);
           }
 
-          paper-progress.green {
-            --paper-progress-active-color: var(--paper-light-green-500);
-            --paper-progress-secondary-color: var(--paper-light-green-100);
+          vertical-progress.green {
+            --vertical-progress-active-color: var(--paper-light-green-500);
+            --vertical-progress-secondary-color: var(--paper-light-green-100);
           }
         </style>
-        <paper-progress value="800" min="100" max="1000" class="red"></paper-progress>
-        <paper-progress value="60" class="green"></paper-progress>
-        <paper-progress value="40" secondary-progress="80" class="blue"></paper-progress>
+        <vertical-progress value="800" min="100" max="1000" class="red"></vertical-progress>
+        <vertical-progress value="60" class="green"></vertical-progress>
+        <vertical-progress value="40" secondary-progress="80" class="blue"></vertical-progress>
       </template>
     </demo-snippet>
   </div>
@@ -117,7 +117,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
     window.addEventListener('WebComponentsReady', function() {
-      progress = document.querySelector('paper-progress');
+      progress = document.querySelector('vertical-progress');
       button = document.querySelector('paper-button');
     });
 
