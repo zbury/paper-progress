@@ -1,4 +1,4 @@
-##&lt;vertical-progress&gt;
+# &lt;vertical-progress&gt;
 
 Fork of [&lt;paper-progress&gt;](https://github.com/PolymerElements/paper-progress) with a vertical layout.
 
