@@ -1,5 +1,5 @@
 {
-  "name": "paper-progress",
+  "name": "vertical-progress",
   "version": "2.0.0",
   "license": "http://polymer.github.io/LICENSE.txt",
   "description": "A material design progress bar",
@@ -10,10 +10,10 @@
     "progress",
     "loading"
   ],
-  "main": "paper-progress.html",
+  "main": "vertical-progress.html",
   "repository": {
     "type": "git",
-    "url": "git://github.com/PolymerElements/paper-progress.git"
+    "url": "git://github.com/zbury/vertical-progress.git"
   },
   "dependencies": {
     "iron-flex-layout": "PolymerElements/iron-flex-layout#2.0-preview",
