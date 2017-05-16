@@ -23,16 +23,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="import" href="../vertical-progress.html">
   <link rel="import" href="../../paper-button/paper-button.html">
 
-  <style is="custom-style" include="demo-pages-shared-styles">
-    vertical-progress {
-      display: block;
-      margin: 0 20px;
-    }
-    paper-button {
-      display: inline-block;
-      padding: 5px;
-    }
-  </style>
+  <custom-style>
+    <style is="custom-style" include="demo-pages-shared-styles">
+      vertical-progress {
+        display: block;
+        margin: 0 20px;
+      }
+      paper-button {
+        display: inline-block;
+        padding: 5px;
+      }
+    </style>
+  </custom-style>
 
 </head>
 <body unresolved>
@@ -51,11 +53,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <h3>vertical-progress can be indeterminate with a custom duration</h3>
     <demo-snippet class="centered-demo">
       <template>
-        <style is="custom-style">
-          vertical-progress.slow {
-            --vertical-progress-indeterminate-cycle-duration: 20s;
-          }
-        </style>
+        <custom-style>
+          <style is="custom-style">
+            vertical-progress.slow {
+              --vertical-progress-indeterminate-cycle-duration: 20s;
+            }
+          </style>
+        </custom-style>
         <vertical-progress indeterminate></vertical-progress>
         <vertical-progress indeterminate class="slow"></vertical-progress>
       </template>
@@ -64,22 +68,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <h3>It can be styled using custom properties</h3>
     <demo-snippet class="centered-demo">
       <template>
-        <style is="custom-style">
-          vertical-progress.blue {
-            --vertical-progress-active-color: var(--paper-light-blue-500);
-            --vertical-progress-secondary-color: var(--paper-light-blue-100);
-          }
+        <custom-style>
+          <style is="custom-style">
+            vertical-progress.blue {
+              --vertical-progress-active-color: var(--paper-light-blue-500);
+              --vertical-progress-secondary-color: var(--paper-light-blue-100);
+            }
 
-          vertical-progress.red {
-            --vertical-progress-active-color: var(--paper-red-500);
-            --vertical-progress-secondary-color: var(--paper-red-100);
-          }
+            vertical-progress.red {
+              --vertical-progress-active-color: var(--paper-red-500);
+              --vertical-progress-secondary-color: var(--paper-red-100);
+            }
 
-          vertical-progress.green {
-            --vertical-progress-active-color: var(--paper-light-green-500);
-            --vertical-progress-secondary-color: var(--paper-light-green-100);
-          }
-        </style>
+            vertical-progress.green {
+              --vertical-progress-active-color: var(--paper-light-green-500);
+              --vertical-progress-secondary-color: var(--paper-light-green-100);
+            }
+          </style>
+        </custom-style>
         <vertical-progress value="800" min="100" max="1000" class="red"></vertical-progress>
         <vertical-progress value="60" class="green"></vertical-progress>
         <vertical-progress value="40" secondary-progress="80" class="blue"></vertical-progress>

@@ -100,12 +100,12 @@ Custom property                                  | Description                  
         overflow: hidden;
       }
 
-      :host([hidden]) {
+      :host([hidden]), [hidden] {
         display: none !important;
       }
 
       #progressContainer {
-        @apply(--vertical-progress-container);
+        @apply --vertical-progress-container;
         position: relative;
       }
 
@@ -118,12 +118,12 @@ Custom property                                  | Description                  
       #primaryProgress,
       #secondaryProgress,
       .indeterminate::after {
-        @apply(--layout-fit);
+        @apply --layout-fit;
       }
 
       #progressContainer,
       .indeterminate::after {
-        background: var(--vertical-progress-container-color, --google-grey-300);
+        background: var(--vertical-progress-container-color, var(--google-grey-300));
       }
 
       :host(.transiting) #primaryProgress,
@@ -146,7 +146,7 @@ Custom property                                  | Description                  
 
       #primaryProgress,
       #secondaryProgress {
-        @apply(--layout-fit);
+        @apply --layout-fit;
         -webkit-transform-origin: bottom center;
         transform-origin: bottom center;
         -webkit-transform: scaleY(0);
@@ -155,19 +155,19 @@ Custom property                                  | Description                  
       }
 
       #primaryProgress {
-        background: var(--vertical-progress-active-color, --google-green-500);
+        background: var(--vertical-progress-active-color, var(--google-green-500));
       }
 
       #secondaryProgress {
-        background: var(--vertical-progress-secondary-color, --google-green-100);
+        background: var(--vertical-progress-secondary-color, var(--google-green-100));
       }
 
       :host([disabled]) #primaryProgress {
-        background: var(--vertical-progress-disabled-active-color, --google-grey-500);
+        background: var(--vertical-progress-disabled-active-color, var(--google-grey-500));
       }
 
       :host([disabled]) #secondaryProgress {
-        background: var(--vertical-progress-disabled-secondary-color, --google-grey-300);
+        background: var(--vertical-progress-disabled-secondary-color, var(--google-grey-300));
       }
 
       :host(:not([disabled])) #primaryProgress.indeterminate {
